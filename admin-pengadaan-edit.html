@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="jCXRybb7SBHhytAzSoc56LSFy40gP0SvBm95YFWA">
+
+    <title>Edit Pengadaan - Asset App </title>
+
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/public/assets/images/favicon.png" type="image/x-icon">
+    <link href="http://127.0.0.1:5500/public/dist/css/style.min.css" rel="stylesheet">
+
+    <link href="http://127.0.0.1:5500/public/assets/extra-libs/select2/select2.min.css" rel="stylesheet" />
+    <link href="http://127.0.0.1:5500/public/assets/extra-libs/select2/select2-bootstrap4.min.css" rel="stylesheet">
+    <style>
+        textarea {
+            height: 100px !important;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+
+
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+
+                    <div class="navbar-brand">
+                        <a href="http://127.0.0.1:5500/admin.html">
+                            <b class="logo-icon">
+                                <img src="http://127.0.0.1:5500/public/assets/images/icon.png" height="30px"
+                                    alt="homepage" class="dark-logo" />
+                            </b>
+                            <span class="logo-text">
+                                <img src="http://127.0.0.1:5500/public/assets/images/text.png" height="30px"
+                                    alt="homepage" class="dark-logo" />
+                            </span>
+                        </a>
+                    </div>
+
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light"></a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+                    </ul>
+
+                    <ul class="navbar-nav float-right">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="javascript:void(0)"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="box">
+                                    <div
+                                        style="background-image: url(http://127.0.0.1:5500/public/assets/images/profile/ava.png);">
+                                    </div>
+                                </div>
+                                <span class="ml-2 d-none d-lg-inline-block">
+                                    <span>Hello,</span>
+                                    <span class="text-dark" style="text-transform: capitalize;">Admin App</span>
+                                    <i data-feather="chevron-down" class="svg-icon"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+
+                                <div class="dropdown-divider mt-3"></div>
+
+                                <a class="dropdown-item" href="http://127.0.0.1:5500/admin-settings.html">
+                                    <i data-feather="settings" class="svg-icon mr-2 ml-1"></i> Setting
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item" href="http://127.0.0.1:5500">
+                                    <i data-feather="power" class="svg-icon mr-2 ml-1"></i>Logout
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="http://127.0.0.1:5500/admin.html"
+                                aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="database" class="feather-icon"></i>
+                                <span class="hide-menu">Barang (Asset)</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="http://127.0.0.1:5500/admin-barang.html" class="sidebar-link">
+                                        <span class="hide-menu">Barang</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item ">
+                                    <a href="http://127.0.0.1:5500/admin-kategori-barang.html" class="sidebar-link ">
+                                        <span class="hide-menu">Kategori</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="truck" class="feather-icon"></i>
+                                <span class="hide-menu">Supplier</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href=" http://127.0.0.1:5500/admin-supplier.html" class="sidebar-link">
+                                        <span class="hide-menu">Supplier</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item ">
+                                    <a href=" http://127.0.0.1:5500/admin-kategori-supplier.html" class="sidebar-link ">
+                                        <span class="hide-menu">Kategori</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-pengadaan.html"
+                                aria-expanded="false">
+                                <i data-feather="shopping-cart" class="feather-icon"></i>
+                                <span class="hide-menu">Pengadaan</span>
+                            </a>
+                        </li>
+
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Kategori</span></li>
+
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-satuan.html"
+                                aria-expanded="false">
+                                <i data-feather="user" class="feather-icon"></i>
+                                <span class="hide-menu">Satuan</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-prioritas.html"
+                                aria-expanded="false">
+                                <i data-feather="alert-circle" class="feather-icon"></i>
+                                <span class="hide-menu">Prioritas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="page-wrapper">
+
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 align-self-center">
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Edit Pengadaan</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="http://127.0.0.1:5500/admin.html"
+                                            class="text-muted">Admin</a></li>
+                                    <li class="breadcrumb-item" aria-current="page"><a
+                                            href="http://127.0.0.1:5500/admin-pengadaan.html"
+                                            class="text-muted">Pengadaan</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Edit</li>
+                                </ol>
+                            </nav>
+                            <a href="http://127.0.0.1:5500/admin-pengadaan.html" class="btn btn-primary ml-auto btn-sm"><i
+                                    class="fa fa-fw fa-arrow-left mr-2"></i>Kembali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <form action="">
+                                    
+                                    <div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-md-8">
+                                                <label for="">Nama pengadaan</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="name">
+                                                            <i data-feather="tag" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="text" class="form-control " name="name"
+                                                        placeholder="Nama pengadaan" value="Pengadaan Pensil" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label for="">Nama brand</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="brand_name">
+                                                            <i data-feather="tag" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="text" class="form-control " name="brand_name"
+                                                        placeholder="Nama brand" value="Fabercastel" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="">Deskripsi</label>
+                                                <textarea name="description" placeholder="Deskripsi pengadaan..."
+                                                    class="form-control ">Pensil yang lama perlu diganti</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="item_category">Kategori barang</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="item_category">
+                                                            <i class="fa fa-fw fa-filter"></i>
+                                                        </label>
+                                                    </div>
+                                                    <select name="item_category" class="form-control ">
+                                                        <option value="" disabled>Pilih Kategori</option>
+                                                        <option value="1" selected>Alat Tulis Kantor</option>
+                                                        <option value="3">Furnitur</option>
+                                                        <option value="4">Lain-lain</option>
+                                                        <option value="2">Operasional</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="supplier">Supplier</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="supplier">
+                                                            <i data-feather="truck" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <select name="supplier" class="form-control ">
+                                                        <option value="" disabled selected>Pilih Supplier</option>
+                                                        <option value="1ea8ad8d38176fcc90500a002700000c" selected>PT.
+                                                            Kobe Indonesia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <label for="priority">Tingkat prioritas</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="priority">
+                                                            <i data-feather="truck" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <select name="priority" class="form-control ">
+                                                        <option value="" disabled selected>Pilih Prioritas</option>
+                                                        <option value="1">Sangat Penting</option>
+                                                        <option value="2">Cukup Penting</option>
+                                                        <option value="3" selected>Penting</option>
+                                                        <option value="4">Kurang Penting</option>
+                                                        <option value="5">Tidak Penting</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="estimate_price">Estimasi harga</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="estimate_price">
+                                                            <i data-feather="dollar-sign" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="text" class="form-control " name="estimate_price"
+                                                        placeholder="Estimasi harga" value="9000000" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <label for="amount">Jumlah</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="amount">
+                                                            <i data-feather="layers" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="text" class="form-control " name="amount"
+                                                        placeholder="Jumlah" value="1000" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="approved">Telah disetujui ?</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="priority">
+                                                            <i class="fa fa-fw fa-question-circle"></i>
+                                                        </label>
+                                                    </div>
+                                                    <select name="approved" class="form-control ask ">
+                                                        <option value="" disabled selected>Pilihan anda</option>
+                                                        <option value="0" selected>Tidak</option>
+                                                        <option value="1">Ya</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group approved">
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <label for="will_buy_at">Akan dibeli pada</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="will_buy_at">
+                                                            <i data-feather="calendar" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="date" class="form-control " name="will_buy_at"
+                                                        value="-" />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label for="approved_at">Distujui pada</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <label class="input-group-text" for="approved_at">
+                                                            <i data-feather="calendar" class="svg-icon"></i>
+                                                        </label>
+                                                    </div>
+                                                    <input type="date" class="form-control " name="approved_at"
+                                                        value="-" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-primary btn-sm"><i
+                                                    class="fa fa-fw fa-save mr-2"></i>Simpan</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. System Developed by
+                <a class="text-danger"><b>Morphling Coding</b></a>
+            </footer>
+
+
+        </div>
+
+    </div>
+
+
+    <script src=" http://127.0.0.1:5500/public/js/app.min.js "></script>
+    <script src=" http://127.0.0.1:5500/public/js/all.min.js "></script>
+    <script src="http://127.0.0.1:5500/public/assets/extra-libs/select2/select2.min.js"></script>
+    <script>
+        $('.approved').hide();
+        $('.ask').change(function () {
+            ($(this).val() == 1) ? $('.approved').show().fadeIn(): $('.approved').hide();
+        })
+        $('select').select2({
+            theme: 'bootstrap4',
+        });
+    </script>
+</body>
+
+</html>

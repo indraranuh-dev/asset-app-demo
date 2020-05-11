@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="jCXRybb7SBHhytAzSoc56LSFy40gP0SvBm95YFWA">
+
+    <title>Daftar Supplier - Asset App </title>
+
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/public/assets/images/favicon.png" type="image/x-icon">
+    <link href="http://127.0.0.1:5500/public/dist/css/style.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="http://127.0.0.1:5500/public/assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css">
+</head>
+
+<body>
+
+
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+
+
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md">
+                <div class="navbar-header" data-logobg="skin6">
+
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ti-menu ti-close"></i></a>
+
+                    <div class="navbar-brand">
+                        <a href="http://127.0.0.1:5500/admin.html">
+                            <b class="logo-icon">
+                                <img src="http://127.0.0.1:5500/public/assets/images/icon.png" height="30px" alt="homepage"
+                                    class="dark-logo" />
+                            </b>
+                            <span class="logo-text">
+                                <img src="http://127.0.0.1:5500/public/assets/images/text.png" height="30px" alt="homepage"
+                                    class="dark-logo" />
+                            </span>
+                        </a>
+                    </div>
+
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light"></a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+                    </ul>
+
+                    <ul class="navbar-nav float-right">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="javascript:void(0)"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="box">
+                                    <div
+                                        style="background-image: url(http://127.0.0.1:5500/public/assets/images/profile/ava.png);">
+                                    </div>
+                                </div>
+                                <span class="ml-2 d-none d-lg-inline-block">
+                                    <span>Hello,</span>
+                                    <span class="text-dark" style="text-transform: capitalize;">Admin App</span>
+                                    <i data-feather="chevron-down" class="svg-icon"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+
+                                <div class="dropdown-divider mt-3"></div>
+
+                                <a class="dropdown-item" href="http://127.0.0.1:5500/admin-settings.html">
+                                    <i data-feather="settings" class="svg-icon mr-2 ml-1"></i> Setting
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a class="dropdown-item" href="http://127.0.0.1:5500">
+                                    <i data-feather="power" class="svg-icon mr-2 ml-1"></i>Logout
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link sidebar-link" href="http://127.0.0.1:5500/admin.html"
+                                aria-expanded="false">
+                                <i data-feather="home" class="feather-icon"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="database" class="feather-icon"></i>
+                                <span class="hide-menu">Barang (Asset)</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                                <li class="sidebar-item">
+                                    <a href="http://127.0.0.1:5500/admin-barang.html" class="sidebar-link">
+                                        <span class="hide-menu">Barang</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item ">
+                                    <a href="http://127.0.0.1:5500/admin-kategori-barang.html" class="sidebar-link ">
+                                        <span class="hide-menu">Kategori</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  selected">
+                            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                                <i data-feather="truck" class="feather-icon"></i>
+                                <span class="hide-menu">Supplier</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse first-level base-level-line in">
+                                <li class="sidebar-item active">
+                                    <a href=" http://127.0.0.1:5500/admin-supplier.html" class="sidebar-link active">
+                                        <span class="hide-menu">Supplier</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item ">
+                                    <a href=" http://127.0.0.1:5500/admin-kategori-supplier.html" class="sidebar-link ">
+                                        <span class="hide-menu">Kategori</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-pengadaan.html"
+                                aria-expanded="false">
+                                <i data-feather="shopping-cart" class="feather-icon"></i>
+                                <span class="hide-menu">Pengadaan</span>
+                            </a>
+                        </li>
+
+                        <li class="list-divider"></li>
+
+                        <li class="nav-small-cap"><span class="hide-menu">Kategori</span></li>
+
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-satuan.html"
+                                aria-expanded="false">
+                                <i data-feather="user" class="feather-icon"></i>
+                                <span class="hide-menu">Satuan</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link" href="http://127.0.0.1:5500/admin-prioritas.html"
+                                aria-expanded="false">
+                                <i data-feather="alert-circle" class="feather-icon"></i>
+                                <span class="hide-menu">Prioritas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+
+        <div class="page-wrapper">
+
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 align-self-center">
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Daftar Supplier</span>
+                        </h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="http://127.0.0.1:5500/admin.html"
+                                            class="text-muted">Admin</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Supplier</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nama Perusahaan</th>
+                                                <th>Nama Produk</th>
+                                                <th>Kategori Supplier</th>
+                                                <th>Telepon</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center"> 1 </td>
+                                                <td> PT. Kobe Indonesia </td>
+                                                <td> Bon Cabe </td>
+                                                <td> Makanan dan Minuman </td>
+                                                <td> 08123456789 </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-default btn-sm show-detail"
+                                                        data-target="1ea8ad8d38176fcc90500a002700000c"
+                                                        title="Lihat detail">
+                                                        <i class="fa fa-fw fa-eye"></i>
+                                                    </button>
+                                                    <a href=" http://127.0.0.1:5500/admin-supplier-edit.html"
+                                                        class="btn btn-default btn-sm" title="Edit"><i
+                                                            class="fa fa-fw fa-edit"></i></a>
+                                                    <button
+                                                            class="btn btn-default btn-sm" title="Hapus"
+                                                            onclick="return confirm('Anda yakin akan menghapus data ini ?');"><i
+                                                                class="fa fa-fw fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="show" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true"
+                    style="transition: .3s ease;">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="list-group">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. System Developed by
+                <a class="text-danger"><b>Morphling Coding</b></a>
+            </footer>
+
+
+        </div>
+
+    </div>
+
+
+    <script src=" http://127.0.0.1:5500/public/js/app.min.js "></script>
+    <script src=" http://127.0.0.1:5500/public/js/all.min.js "></script>
+    <script src="http://127.0.0.1:5500/public/assets/extra-libs/datatables.net/js/pdfmake.min.js"></script>
+    <script src="http://127.0.0.1:5500/public/assets/extra-libs/datatables.net/js/vfs_fonts.js"></script>
+    <script src="http://127.0.0.1:5500/public/js/dt.min.js"></script>
+    <script src="http://127.0.0.1:5500/public/dist/js/pages/r1/suppliers/index.min.js"></script>
+</body>
+
+</html>

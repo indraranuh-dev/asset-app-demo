@@ -1,0 +1,43 @@
+[
+    {
+        "id": 3,
+        "name": "Pengadaan Pensil",
+        "brand_name": "Fabercastel",
+        "description": "Pensil yang lama perlu diganti",
+        "item_category_id": 1,
+        "supplier_id": "1ea8ad8d38176fcc90500a002700000c",
+        "amount": 1000,
+        "priority_id": 3,
+        "estimate_price": "9000000",
+        "will_buy_at": "-",
+        "approved": 0,
+        "approved_at": "-",
+        "set_reminder": 0,
+        "created_at": "2020-05-01T00:54:14.000000Z",
+        "updated_at": "2020-05-01T00:54:43.000000Z",
+        "item_category": {
+            "id": 1,
+            "name": "Alat Tulis Kantor",
+            "created_at": "2020-04-28T06:45:31.000000Z",
+            "updated_at": "2020-04-28T06:45:31.000000Z"
+        },
+        "supplier": {
+            "id": "1ea8ad8d38176fcc90500a002700000c",
+            "name": "PT. Kobe Indonesia",
+            "address": "Jakarta Pusat",
+            "phone": "08123010705",
+            "product_name": "Bon Cabe",
+            "supplier_category_id": 1,
+            "last_supply": "2020-04-29",
+            "next_supply": "-",
+            "created_at": "2020-04-30T04:50:45.000000Z",
+            "updated_at": "2020-04-30T05:20:39.000000Z"
+        },
+        "priority": {
+            "id": 3,
+            "name": "Penting",
+            "created_at": "2020-04-28T06:45:31.000000Z",
+            "updated_at": "2020-04-28T06:45:31.000000Z"
+        }
+    }
+]

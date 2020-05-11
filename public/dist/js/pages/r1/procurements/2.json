@@ -1,0 +1,43 @@
+[
+    {
+        "id": 2,
+        "name": "Pengadaan Kopi",
+        "brand_name": "Kopi Kapal Selam",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, consectetur illo mollitia voluptate quasi aperiam dolorem alias temporibus amet delectus quos enim, nobis dolor commodi nihil. In possimus sit",
+        "item_category_id": 4,
+        "supplier_id": "1ea8ad8d38176fcc90500a002700000c",
+        "amount": 10,
+        "priority_id": 5,
+        "estimate_price": "500000",
+        "will_buy_at": "2020-05-20",
+        "approved": 1,
+        "approved_at": "2020-05-01",
+        "set_reminder": 0,
+        "created_at": "2020-04-30T23:24:58.000000Z",
+        "updated_at": "2020-05-01T00:31:09.000000Z",
+        "item_category": {
+            "id": 4,
+            "name": "Lain-lain",
+            "created_at": "2020-04-28T06:45:32.000000Z",
+            "updated_at": "2020-04-28T06:45:32.000000Z"
+        },
+        "supplier": {
+            "id": "1ea8ad8d38176fcc90500a002700000c",
+            "name": "PT. Kobe Indonesia",
+            "address": "Jakarta Pusat",
+            "phone": "08123010705",
+            "product_name": "Bon Cabe",
+            "supplier_category_id": 1,
+            "last_supply": "2020-04-29",
+            "next_supply": "-",
+            "created_at": "2020-04-30T04:50:45.000000Z",
+            "updated_at": "2020-04-30T05:20:39.000000Z"
+        },
+        "priority": {
+            "id": 5,
+            "name": "Tidak Penting",
+            "created_at": "2020-04-28T06:45:31.000000Z",
+            "updated_at": "2020-04-28T06:45:31.000000Z"
+        }
+    }
+]
