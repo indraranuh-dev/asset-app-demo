@@ -41,7 +41,7 @@ $('table').DataTable({
                 class: 'btn btn-primary btn-sm bt',
             },
             action: function ( e, dt, button, config ) {
-                window.location = 'http://127.0.0.1:5500/admin-kategori-barang-tambah.html';
+                window.location = 'https://indraranuh-dev.github.io/asset-app-demo/admin-kategori-barang-tambah.html';
             }
         },
     ]

@@ -40,7 +40,7 @@ $('table').DataTable({
                 class: 'btn btn-primary btn-sm bt',
             },
             action: function (e, dt, button, config) {
-                window.location = 'http://127.0.0.1:5500/admin-settings-manage-akun-tambah.html';
+                window.location = 'https://indraranuh-dev.github.io/asset-app-demo/admin-settings-manage-akun-tambah.html';
             }
         },
     ]
@@ -52,7 +52,7 @@ $('.show-detail').click(function () {
     $('#show').modal('show');
     $('.modal-title').text('Detail Akun')
     const _target = $(this).data('target');
-    $.getJSON( `http://127.0.0.1:5500/public/dist/js/pages/r1/users/${_target}.json`, function( data ) {
+    $.getJSON( `https://indraranuh-dev.github.io/asset-app-demo/public/dist/js/pages/r1/users/${_target}.json`, function( data ) {
         const elm = function (val, text) {
             return '<a class="list-group-item list-group-item-action">' + val + ' <span class="badge badge-primary ml-auto badge-pill">' + text + '</span></a>';
         };
